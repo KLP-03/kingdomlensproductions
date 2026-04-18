@@ -190,15 +190,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .booking-hero p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;color:var(--muted2);max-width:520px;margin:18px auto 0;line-height:1.5;}
 .booking-body{max-width:900px;margin:0 auto;padding:72px 48px 110px;}
 .booking-options{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border:1px solid var(--border);}
-.booking-card{background:var(--card);padding:44px 36px;transition:background 0.3s;}
+.booking-card{background:var(--card);padding:44px 36px;transition:background 0.3s;display:flex;flex-direction:column;}
 .booking-card:hover{background:var(--card2);}
 .booking-card-icon{font-size:36px;margin-bottom:20px;display:block;}
 .booking-card-title{font-family:"Bebas Neue",sans-serif;font-size:28px;letter-spacing:1px;margin-bottom:10px;}
-.booking-card-desc{font-size:14px;color:var(--muted2);line-height:1.7;margin-bottom:28px;}
-.booking-card-details{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:32px;}
+.booking-card-desc{font-size:14px;color:var(--muted2);line-height:1.7;margin-bottom:28px;flex:1;}
+.booking-card-details{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:32px;margin-top:auto;}
 .booking-card-details li{display:flex;gap:10px;font-size:13px;color:var(--muted2);}
 .booking-card-details li::before{content:"—";color:var(--gold);flex-shrink:0;}
-.booking-btn{display:block;padding:14px 24px;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold-dim);color:var(--gold);transition:all 0.3s;text-align:center;cursor:pointer;}
+.booking-btn{display:block;padding:14px 24px;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold-dim);color:var(--gold);transition:all 0.3s;text-align:center;cursor:pointer;margin-top:auto;}
 .booking-btn:hover,.booking-btn.primary{background:var(--gold);color:var(--black);border-color:var(--gold);}
 .booking-btn.primary:hover{background:var(--gold-light);}
 
