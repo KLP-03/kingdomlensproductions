@@ -11,7 +11,7 @@
 
 <nav>
   <div onclick="showPage('home')" style="cursor:pointer;">
-    <img src="images/logo.png" alt="Kingdom Lens Productions" style="height:100px;width:auto;">
+    <img src="images/logo.png" alt="Kingdom Lens Productions" style="height:40px;width:auto;">
   </div>
   <div class="nav-links">
     <a onclick="showPage('home')">Home</a>
@@ -59,6 +59,33 @@
           <div class="showcase-hero-title">Google</div>
           <div class="showcase-hero-desc">Event production for Google's kids robotics program in Atlanta. Full event coverage, direction, and post-production by Kingdom Lens.</div>
           <a class="btn-ghost" onclick="showPage('portfolio')">View All Work →</a>
+        </div>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-card" onclick="showPage('portfolio')">
+          <div class="showcase-card-bg" style="background:linear-gradient(135deg,#1a0a14,#2a1020);"></div>
+          <div class="showcase-card-overlay">
+            <div class="showcase-card-type">Spec Commercial</div>
+            <div class="showcase-card-title">Stella Rosa</div>
+          </div>
+          <div class="showcase-card-placeholder"><span>🍷</span></div>
+        </div>
+        <div class="showcase-card" onclick="showPage('portfolio')">
+          <div class="showcase-card-bg" style="background:linear-gradient(135deg,#1a0a0a,#2a1010);"></div>
+          <div class="showcase-card-overlay">
+            <div class="showcase-card-type">Spec Commercial</div>
+            <div class="showcase-card-title">Red Bull</div>
+          </div>
+          <div class="showcase-card-placeholder"><span>🎬</span></div>
+        </div>
+        <div class="showcase-card" onclick="showPage('portfolio')">
+          <div class="showcase-card-bg" style="background:linear-gradient(135deg,#14100a,#201808);"></div>
+          <div class="showcase-card-overlay">
+            <div class="showcase-card-type">Music Video</div>
+            <div class="showcase-card-title">Sy the Southern Yankee</div>
+          </div>
+          <div class="showcase-card-placeholder"><span>🎵</span></div>
         </div>
       </div>
 
@@ -161,32 +188,33 @@
   </div>
   <div class="port-filter">
     <button class="filter-btn active" onclick="filterPort('all',this)">All Work</button>
-    <button class="filter-btn" onclick="filterPort('brand',this)">Brand Films</button>
+    <button class="filter-btn" onclick="filterPort('commercial',this)">Commercials</button>
     <button class="filter-btn" onclick="filterPort('content',this)">Content Days</button>
     <button class="filter-btn" onclick="filterPort('events',this)">Events</button>
     <button class="filter-btn" onclick="filterPort('corporate',this)">Corporate</button>
-    <button class="filter-btn" onclick="filterPort('interviews',this)">Interviews</button>
   </div>
   <div class="port-grid">
 
     <!-- RED BULL — vertical short -->
-    <div class="port-item vertical" data-type="brand">
+    <div class="port-item vertical" data-type="commercial">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#1a0a0a,#2a1010);"></div>
       <iframe
         style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
         src="https://www.youtube.com/embed/cuxj4zG0lIQ"
         allowfullscreen>
       </iframe>
+      <div class="port-item-overlay"><div class="port-item-type">Spec Commercial</div><div class="port-item-title">Red Bull</div><div class="port-item-client">Reimagined — Chill Aesthetic</div></div>
     </div>
 
     <!-- STELLA ROSA — vertical short -->
-    <div class="port-item vertical" data-type="brand">
+    <div class="port-item vertical" data-type="commercial">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#1a0a14,#2a1020);"></div>
       <iframe
         style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
         src="https://www.youtube.com/embed/M9DcYXEbD8Q"
         allowfullscreen>
       </iframe>
+      <div class="port-item-overlay"><div class="port-item-type">Spec Commercial</div><div class="port-item-title">Stella Rosa</div><div class="port-item-client">ft. Mulodiq</div></div>
     </div>
 
     <!-- GOOGLE — horizontal -->
@@ -197,6 +225,7 @@
         src="https://www.youtube.com/embed/hKAvuh6ddkk"
         allowfullscreen>
       </iframe>
+      <div class="port-item-overlay"><div class="port-item-type">Event Coverage</div><div class="port-item-title">Google</div><div class="port-item-client">Kids Robotics Program · Atlanta</div></div>
     </div>
 
     <!-- WRITING CAMP — vertical short -->
@@ -207,6 +236,7 @@
         src="https://www.youtube.com/embed/7BnzfeG9S_g"
         allowfullscreen>
       </iframe>
+      <div class="port-item-overlay"><div class="port-item-type">Event Recap</div><div class="port-item-title">Writing Camp</div><div class="port-item-client">KMo Shamaal · Christian R&B</div></div>
     </div>
 
     <!-- CREATIVE CLUBHOUSE — vertical short -->
@@ -217,6 +247,7 @@
         src="https://www.youtube.com/embed/V9_oJQO_DQg"
         allowfullscreen>
       </iframe>
+      <div class="port-item-overlay"><div class="port-item-type">Event Coverage</div><div class="port-item-title">Creative Clubhouse</div><div class="port-item-client">Networking Event · Atlanta</div></div>
     </div>
 
     <!-- WHAT WE TALKIN BOUT — horizontal content day -->
@@ -227,7 +258,12 @@
         src="https://www.youtube.com/embed/7Tt8JQgrq7Y"
         allowfullscreen>
       </iframe>
+      <div class="port-item-overlay"><div class="port-item-type">Music Video</div><div class="port-item-title">What We Talkin' Bout</div><div class="port-item-client">Sy the Southern Yankee</div></div>
     </div>
+
+
+
+
 
   </div>
 
