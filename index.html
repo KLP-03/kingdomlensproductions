@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kingdom Lens Productions — Atlanta Video Production</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <nav>
   <div onclick="showPage('home')" style="cursor:pointer;">
-    <img src="images/logo.png" alt="Kingdom Lens Productions" style="height:40px;width:auto;">
+    <img src="images/logo.png" alt="Kingdom Lens Productions" style="height:100px;width:auto;">
   </div>
   <div class="nav-links">
     <a onclick="showPage('home')">Home</a>
@@ -49,44 +48,17 @@
 
       <div class="showcase-hero">
         <div class="showcase-hero-frame">
-          <div class="showcase-hero-placeholder">
-            <div class="showcase-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
-            <p class="showcase-hero-label">Add your Stella Rosa video here</p>
-            <p class="showcase-hero-sub">Upload to YouTube unlisted → send me the video ID</p>
-          </div>
+          <iframe
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+            src="https://www.youtube.com/embed/hKAvuh6ddkk"
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="showcase-hero-info">
-          <div class="showcase-hero-type">Spec Commercial</div>
-          <div class="showcase-hero-title">Stella Rosa</div>
-          <div class="showcase-hero-desc">A cinematic brand film produced for Stella Rosa. Full creative direction, production, and post-production by Kingdom Lens.</div>
+          <div class="showcase-hero-type">Corporate & B2B</div>
+          <div class="showcase-hero-title">Google</div>
+          <div class="showcase-hero-desc">Event production for Google's kids robotics program in Atlanta. Full event coverage, direction, and post-production by Kingdom Lens.</div>
           <a class="btn-ghost" onclick="showPage('portfolio')">View All Work →</a>
-        </div>
-      </div>
-
-      <div class="showcase-grid">
-        <div class="showcase-card" onclick="showPage('portfolio')">
-          <div class="showcase-card-bg" style="background:linear-gradient(135deg,#1a0a14,#2a1020);"></div>
-          <div class="showcase-card-overlay">
-            <div class="showcase-card-type">Spec Commercial</div>
-            <div class="showcase-card-title">Stella Rosa</div>
-          </div>
-          <div class="showcase-card-placeholder"><span>🍷</span></div>
-        </div>
-        <div class="showcase-card" onclick="showPage('portfolio')">
-          <div class="showcase-card-bg" style="background:linear-gradient(135deg,#0a0a1a,#10102a);"></div>
-          <div class="showcase-card-overlay">
-            <div class="showcase-card-type">Corporate & B2B</div>
-            <div class="showcase-card-title">Google</div>
-          </div>
-          <div class="showcase-card-placeholder"><span>🏢</span></div>
-        </div>
-        <div class="showcase-card" onclick="showPage('portfolio')">
-          <div class="showcase-card-bg" style="background:linear-gradient(135deg,#140a1a,#201028);"></div>
-          <div class="showcase-card-overlay">
-            <div class="showcase-card-type">Content Day</div>
-            <div class="showcase-card-title">All Things JV</div>
-          </div>
-          <div class="showcase-card-placeholder"><span>🙏</span></div>
         </div>
       </div>
 
@@ -190,61 +162,73 @@
   <div class="port-filter">
     <button class="filter-btn active" onclick="filterPort('all',this)">All Work</button>
     <button class="filter-btn" onclick="filterPort('brand',this)">Brand Films</button>
-    <button class="filter-btn" onclick="filterPort('product',this)">Product Shoots</button>
     <button class="filter-btn" onclick="filterPort('content',this)">Content Days</button>
     <button class="filter-btn" onclick="filterPort('events',this)">Events</button>
     <button class="filter-btn" onclick="filterPort('corporate',this)">Corporate</button>
+    <button class="filter-btn" onclick="filterPort('interviews',this)">Interviews</button>
   </div>
   <div class="port-grid">
-    <div class="port-item" data-type="brand" onclick="openVideo('https://vimeo.com/','Stella Rosa','Brand Film','Stella Rosa')">
+
+    <!-- RED BULL — vertical short -->
+    <div class="port-item vertical" data-type="brand">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#1a0a0a,#2a1010);"></div>
-      <div class="port-placeholder"><span>🎬</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Brand Film · Spec</div><div class="port-item-title">Red Bull</div><div class="port-item-client">Spec Commercial</div></div>
+      <iframe
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        src="https://www.youtube.com/embed/cuxj4zG0lIQ"
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="port-item" data-type="brand" onclick="openVideo('https://vimeo.com/','Stella Rosa','Brand Film','Stella Rosa')">
+
+    <!-- STELLA ROSA — vertical short -->
+    <div class="port-item vertical" data-type="brand">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#1a0a14,#2a1020);"></div>
-      <iframe 
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+      <iframe
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
         src="https://www.youtube.com/embed/M9DcYXEbD8Q"
         allowfullscreen>
       </iframe>
-      <div class="port-item-overlay"><div class="port-item-type">Spec Commercial</div><div class="port-item-title">Stella Rosa</div><div class="port-item-client">Product Commercial</div></div>
     </div>
-    <div class="port-item" data-type="corporate" onclick="openVideo('https://vimeo.com/','Google','Corporate','Google')">
+
+    <!-- GOOGLE — horizontal -->
+    <div class="port-item" data-type="corporate">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#0a0a1a,#10102a);"></div>
-      <div class="port-placeholder"><span>🏢</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Corporate & B2B</div><div class="port-item-title">Google</div><div class="port-item-client">Corporate Production</div></div>
+      <iframe
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        src="https://www.youtube.com/embed/hKAvuh6ddkk"
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="port-item" data-type="corporate" onclick="openVideo('https://vimeo.com/','KIPP Schools','Corporate','KIPP Schools')">
-      <div class="port-item-bg" style="background:linear-gradient(135deg,#0a140a,#10201a);"></div>
-      <div class="port-placeholder"><span>🏫</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Corporate & B2B</div><div class="port-item-title">KIPP Schools</div><div class="port-item-client">Institutional</div></div>
-    </div>
-    <div class="port-item" data-type="events" onclick="openVideo('https://vimeo.com/','Womens Retreat','Event Coverage','Private Client')">
-      <div class="port-item-bg" style="background:linear-gradient(135deg,#140a1a,#201028);"></div>
-      <div class="port-placeholder"><span>🎊</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Event Coverage</div><div class="port-item-title">Women's Retreat</div><div class="port-item-client">Promotional Campaign</div></div>
-    </div>
-    <div class="port-item" data-type="events" onclick="openVideo('https://vimeo.com/','Writing Camp','Event Recap','Private Client')">
+
+    <!-- WRITING CAMP — vertical short -->
+    <div class="port-item vertical" data-type="events">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#0f0f14,#181820);"></div>
-      <div class="port-placeholder"><span>✍️</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Event Recap</div><div class="port-item-title">Writing Camp</div><div class="port-item-client">Creative Event</div></div>
+      <iframe
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        src="https://www.youtube.com/embed/7BnzfeG9S_g"
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="port-item" data-type="content" onclick="openVideo('https://vimeo.com/','Content Day','Content Day','Client')">
+
+    <!-- CREATIVE CLUBHOUSE — vertical short -->
+    <div class="port-item vertical" data-type="events">
+      <div class="port-item-bg" style="background:linear-gradient(135deg,#140a1a,#201028);"></div>
+      <iframe
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        src="https://www.youtube.com/embed/V9_oJQO_DQg"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- WHAT WE TALKIN BOUT — horizontal content day -->
+    <div class="port-item" data-type="content">
       <div class="port-item-bg" style="background:linear-gradient(135deg,#14100a,#201808);"></div>
-      <div class="port-placeholder"><span>📱</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Content Day</div><div class="port-item-title">Content Day</div><div class="port-item-client">Short-Form Campaign</div></div>
+      <iframe
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        src="https://www.youtube.com/embed/7Tt8JQgrq7Y"
+        allowfullscreen>
+      </iframe>
     </div>
-    <div class="port-item" data-type="interviews" onclick="openVideo('https://vimeo.com/','Talking Head Series','Interviews','Client')">
-      <div class="port-item-bg" style="background:linear-gradient(135deg,#0a1414,#102020);"></div>
-      <div class="port-placeholder"><span>🎤</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Interviews</div><div class="port-item-title">Talking Head Series</div><div class="port-item-client">Social Content</div></div>
-    </div>
-    <div class="port-item" data-type="content" onclick="openVideo('https://vimeo.com/','All Things JV Devotionals','Content Day Series','All Things JV')">
-      <div class="port-item-bg" style="background:linear-gradient(135deg,#100a14,#180f20);"></div>
-      <div class="port-placeholder"><span>🙏</span><p>Add Vimeo embed</p></div>
-      <div class="port-item-overlay"><div class="port-item-type">Content Day Series</div><div class="port-item-title">All Things JV</div><div class="port-item-client">Devotional Series · 7-day Campaign</div></div>
-    </div>
+
   </div>
 
   <div style="text-align:center;padding:72px 24px;background:radial-gradient(ellipse 60% 60% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);">
@@ -284,7 +268,6 @@
           <li>1 hero brand video (60–90 sec)</li>
           <li>Fully edited & caption-ready delivery</li>
           <li>Monthly content strategy session</li>
-          
         </ul>
       </div>
       <div class="r-card featured">
@@ -296,9 +279,7 @@
           <li>2 shoot days per month</li>
           <li>Up to 20 short-form videos across all platforms</li>
           <li>1 hero brand video per month</li>
-          
           <li>Monthly strategy & performance review</li>
-          
         </ul>
       </div>
       <div class="r-card">
@@ -330,7 +311,6 @@
       <div class="oneoff-card"><span class="oneoff-icon">📦</span><div class="oneoff-name">Product Shoot</div><div class="oneoff-price">From $1,800</div><p class="oneoff-desc">Launch a new product with cinematic video and photo content. Soap, clothing, cologne, food — any physical product that needs to look its best.</p></div>
       <div class="oneoff-card"><span class="oneoff-icon">🎊</span><div class="oneoff-name">Event Coverage</div><div class="oneoff-price">From $2,000</div><p class="oneoff-desc">Highlights reel, key moments, social clips, and full recap film. Delivered within 72 hours of your event.</p></div>
     </div>
-
     <div style="margin-top:2px;background:var(--border);">
     <div style="padding:32px 36px;background:var(--card);border:1px solid var(--border);">
       <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:20px;">Secondary Services</div>
@@ -376,7 +356,7 @@
         <span class="booking-card-icon">🎬</span>
         <div class="booking-card-title">Brand Film Consultation</div>
         <div class="booking-card-desc">A focused 30-minute call for businesses and professionals ready to tell their story on screen. We'll talk about who you are, who you serve, and what you want the world to know about you — then map out a brand film strategy built around your goals, your audience, and your timeline.</div>
-        <ul class="booking-card-details">       
+        <ul class="booking-card-details">
           <li>30 minutes · Virtual</li>
           <li>Brand film strategy & concept</li>
           <li>Production timeline & investment</li>
@@ -385,7 +365,6 @@
         <a href="https://calendly.com/kingdomlensproductions/production-consult" target="_blank" class="booking-btn">Book Brand Film Consult →</a>
       </div>
     </div>
-
     <div style="margin-top:2px;background:var(--border);border:1px solid var(--border);">
       <div style="padding:32px 36px;background:var(--card);">
         <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:16px;">Other Productions</div>
