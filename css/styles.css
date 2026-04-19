@@ -264,9 +264,8 @@ footer{padding:52px 48px;border-top:1px solid var(--border);display:flex;align-i
   .port-filter{padding:24px 20px 0;gap:6px;}
   .filter-btn{padding:7px 14px;font-size:9px;}
   .port-grid{grid-template-columns:1fr;padding:0 20px;margin:16px auto 48px;gap:2px;}
-  /* Vertical items become landscape on mobile so they don't eat the full screen */
-  .port-item.vertical{aspect-ratio:16/9;}
   .port-item{aspect-ratio:16/9;}
+  .port-item.vertical{aspect-ratio:9/16;}
 
   /* Pricing */
   .pricing-hero{padding:80px 20px 48px;min-height:auto;}
