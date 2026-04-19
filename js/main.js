@@ -62,25 +62,15 @@ function filterPort(type, btn) {
     b.classList.remove("active");
   });
   btn.classList.add("active");
-  document.querySelectorAll(".port-item").forEach(function(item) {
-    var isVisible = (type === "all" || item.dataset.type === type);
+  document.querySelectorAll(".port-entry").forEach(function(entry) {
+    var isVisible = (type === "all" || entry.dataset.type === type);
     if (!isVisible) {
-      resetYT(item.querySelector(".yt-thumb"));
-      item.style.display = "none";
+      resetYT(entry.querySelector(".yt-thumb"));
+      entry.style.display = "none";
     } else {
-      item.style.display = "";
+      entry.style.display = "";
     }
   });
-  var verticalGrid = document.querySelector(".port-grid--vertical");
-  var landscapeGrid = document.querySelector(".port-grid--landscape");
-  if(verticalGrid){
-    var vHasVisible = Array.from(verticalGrid.querySelectorAll(".port-item")).some(function(i){ return i.style.display !== "none"; });
-    verticalGrid.style.display = vHasVisible ? "flex" : "none";
-  }
-  if(landscapeGrid){
-    var lHasVisible = Array.from(landscapeGrid.querySelectorAll(".port-item")).some(function(i){ return i.style.display !== "none"; });
-    landscapeGrid.style.display = lHasVisible ? "grid" : "none";
-  }
 }
 
 function openVideo(url, title) {

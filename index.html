@@ -173,6 +173,7 @@
       <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,10vw,128px);line-height:0.88;letter-spacing:2px;">The Work<br>Speaks.</h1>
     </div>
   </div>
+
   <div class="port-filter">
     <button class="filter-btn active" onclick="filterPort('all',this)">All Work</button>
     <button class="filter-btn" onclick="filterPort('commercial',this)">Commercials</button>
@@ -180,56 +181,118 @@
     <button class="filter-btn" onclick="filterPort('events',this)">Events</button>
     <button class="filter-btn" onclick="filterPort('corporate',this)">Corporate</button>
   </div>
-  <div class="port-grid port-grid--vertical">
-    <div class="port-item vertical" data-type="commercial">
-      <div class="yt-thumb" data-vid="cuxj4zG0lIQ" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/cuxj4zG0lIQ/maxresdefault.jpg" alt="Commercial" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+
+  <div class="port-entries">
+
+    <div class="port-entry" data-type="corporate">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="hKAvuh6ddkk" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/hKAvuh6ddkk/maxresdefault.jpg" alt="Google STEM Robotics Event" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Corporate</div>
+        <h3 class="port-entry-title">Google x REC Foundation — STEM Robotics</h3>
+        <div class="port-entry-client">Google</div>
+        <p class="port-entry-desc">An annual event Kingdom Lens has been trusted to document year after year. Google and the REC Foundation bring Douglas County schools to Legacy Arena to give underrepresented youth hands-on experience with robotics and STEM. Kingdom Lens captured student and staff interviews and delivered a recap film Google uses to document their impact across national tour stops.</p>
       </div>
     </div>
-    <div class="port-item vertical" data-type="commercial">
-      <div class="yt-thumb" data-vid="M9DcYXEbD8Q" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/M9DcYXEbD8Q/maxresdefault.jpg" alt="Commercial" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+
+    <div class="port-entry port-entry--vertical" data-type="commercial">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="M9DcYXEbD8Q" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/M9DcYXEbD8Q/maxresdefault.jpg" alt="Stella Rosa Spec Commercial" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Commercial · Spec</div>
+        <h3 class="port-entry-title">Stella Rosa — Spec Commercial</h3>
+        <div class="port-entry-client">Spec</div>
+        <p class="port-entry-desc">A spec commercial built around Atlanta recording artist Mulodiq and the idea that creativity deserves a proper reward. The concept follows him through his studio session — writing, recording, refining — and ends with him winding down with a glass of Stella Rosa. A lifestyle piece that repositions the brand as a companion to the creative process.</p>
       </div>
     </div>
-    <div class="port-item vertical" data-type="events">
-      <div class="yt-thumb" data-vid="7BnzfeG9S_g" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/7BnzfeG9S_g/maxresdefault.jpg" alt="Events" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+
+    <div class="port-entry port-entry--vertical" data-type="commercial">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="cuxj4zG0lIQ" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/cuxj4zG0lIQ/maxresdefault.jpg" alt="Red Bull Spec Commercial" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Commercial · Spec</div>
+        <h3 class="port-entry-title">Red Bull — Spec Commercial</h3>
+        <div class="port-entry-client">Spec</div>
+        <p class="port-entry-desc">Shot on-site during KMO Shamaal's writing camp, this Red Bull spec was built around a simple reframe: Red Bull isn't just for action sports. Developed in partnership with The Creative Corporate, the concept leans into a moody, atmospheric aesthetic — positioning Red Bull as the drink of late-night studio sessions and creative gatherings where real work gets made.</p>
       </div>
     </div>
-    <div class="port-item vertical" data-type="events">
-      <div class="yt-thumb" data-vid="V9_oJQO_DQg" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/V9_oJQO_DQg/maxresdefault.jpg" alt="Events" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+
+    <div class="port-entry port-entry--vertical" data-type="events">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="7BnzfeG9S_g" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/7BnzfeG9S_g/maxresdefault.jpg" alt="KMO Shamaal Writing Camp" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Event Coverage</div>
+        <h3 class="port-entry-title">KMO Shamaal — Writing Camp</h3>
+        <div class="port-entry-client">The Creative Corporate</div>
+        <p class="port-entry-desc">Atlanta Christian R&B artist KMO Shamaal brought together songwriters, producers, and artists at Atlanta Sound Factory for a full-day writing camp in partnership with The Creative Corporate — a consulting and branding firm dedicated to coaching multidimensional creatives. Kingdom Lens captured the energy, the collaboration, and the creative process, delivering highlight coverage that documented a pivotal moment in the development of his next EP.</p>
       </div>
     </div>
-    <div class="port-item vertical" data-type="events">
-      <div class="yt-thumb" data-vid="CvRvaJgvp8E" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/CvRvaJgvp8E/maxresdefault.jpg" alt="Events" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+
+    <div class="port-entry port-entry--vertical" data-type="events">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="V9_oJQO_DQg" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/V9_oJQO_DQg/maxresdefault.jpg" alt="The Creative Clubhouse Event Recap" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Event Coverage</div>
+        <h3 class="port-entry-title">The Creative Clubhouse — Event Recap</h3>
+        <div class="port-entry-client">The Creative Corporate</div>
+        <p class="port-entry-desc">The Creative Clubhouse is a recurring event produced by The Creative Corporate, a consulting and branding firm dedicated to coaching innovative and multidimensional creative professionals. Kingdom Lens provided full event coverage — capturing the fireside chat, candid moments, and the energy of a room full of creatives finding their community and building their brands.</p>
       </div>
     </div>
+
+    <div class="port-entry port-entry--vertical" data-type="events">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="CvRvaJgvp8E" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/CvRvaJgvp8E/maxresdefault.jpg" alt="Eagles Nest Men's March Madness" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Event Coverage</div>
+        <h3 class="port-entry-title">Eagles Nest — Men's March Madness</h3>
+        <div class="port-entry-client">Eagles Nest Church</div>
+        <p class="port-entry-desc">Eagles Nest Church took their single men's ministry to Top Golf for an evening of competition, community, and brotherhood. Kingdom Lens captured the highlights of the night — including aerial drone coverage — and delivered a recap film the congregation could relive and share.</p>
+      </div>
+    </div>
+
+    <div class="port-entry" data-type="content">
+      <div class="port-entry-video">
+        <div class="yt-thumb" data-vid="7Tt8JQgrq7Y" onclick="loadYT(this)">
+          <img src="https://img.youtube.com/vi/7Tt8JQgrq7Y/maxresdefault.jpg" alt="Sy the Southern Yankee - What We Talkin Bout" loading="lazy">
+          <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="port-entry-info">
+        <div class="port-entry-type">Content Day</div>
+        <h3 class="port-entry-title">Sy the Southern Yankee — What We Talkin Bout</h3>
+        <div class="port-entry-client">Sy the Southern Yankee</div>
+        <p class="port-entry-desc">Atlanta Christian rap artist Sy the Southern Yankee is an ongoing content day client of Kingdom Lens. On one of our recurring shoot days, we turned a city drive into a performance visual for his track "What We Talkin Bout" — keeping him visible online, feeding his audience consistently, and building the kind of momentum that compounds over time.</p>
+      </div>
+    </div>
+
   </div>
 
-  <div class="port-grid port-grid--landscape">
-    <div class="port-item" data-type="content">
-      <div class="yt-thumb" data-vid="7Tt8JQgrq7Y" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/7Tt8JQgrq7Y/maxresdefault.jpg" alt="Content Day" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-    </div>
-    <div class="port-item" data-type="corporate">
-      <div class="yt-thumb" data-vid="hKAvuh6ddkk" onclick="loadYT(this)">
-        <img src="https://img.youtube.com/vi/hKAvuh6ddkk/maxresdefault.jpg" alt="Corporate" loading="lazy">
-        <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align:center;padding:72px 24px;background:radial-gradient(ellipse 60% 60% at 50% 100%,rgba(201,168,76,0.07) 0%,transparent 70%);">
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,36px);color:var(--muted2);margin-bottom:32px;">Like what you see?</p>
+  <div class="port-cta">
+    <p>Like what you see?</p>
     <a class="btn-primary" href="https://calendly.com/kingdomlensproductions" target="_blank">Let's Work Together</a>
   </div>
 
