@@ -39,7 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .page.active{display:block;}
 
 /* ─── HOME HERO ─── */
-.hero{height:100vh;min-height:600px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:72px 24px 0;position:relative;overflow:hidden;}
+.hero{display:flex;flex-direction:column;justify-content:flex-start;align-items:center;text-align:center;padding:108px 24px 80px;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% -10%,rgba(201,168,76,0.12) 0%,transparent 60%),var(--black);}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 30%,transparent 100%);opacity:0.4;}
 .hero-content{position:relative;z-index:2;text-align:center;width:100%;display:flex;flex-direction:column;align-items:center;}
@@ -55,7 +55,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .btn-primary:hover{background:var(--gold-light);}
 .btn-ghost{padding:15px 38px;border:1px solid var(--border2);color:var(--muted2);font-size:11px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;display:inline-block;}
 .btn-ghost:hover{border-color:var(--gold-dim);color:var(--gold);}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;}
+.hero-scroll{display:none;}
 .hero-scroll span{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--muted);}
 .scroll-bar{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollAnim 2s ease-in-out infinite;}
 @keyframes scrollAnim{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
@@ -116,7 +116,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .home-cta p{font-size:15px;color:var(--muted2);max-width:420px;margin:0 auto 44px;line-height:1.7;}
 
 /* ─── ABOUT ─── */
-.about-hero{min-height:55vh;display:flex;align-items:flex-end;padding:100px 48px 72px;background:radial-gradient(ellipse 80% 60% at 0% 50%,rgba(201,168,76,0.06) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);}
+.about-hero{display:flex;align-items:flex-end;padding:108px 48px 48px;background:radial-gradient(ellipse 80% 60% at 0% 50%,rgba(201,168,76,0.06) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);}
 .about-hero-inner{max-width:1200px;margin:0 auto;width:100%;}
 .page-tag{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
 .about-hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(52px,10vw,128px);line-height:0.88;letter-spacing:2px;}
@@ -134,12 +134,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .about-value-text{font-size:13px;color:var(--muted2);line-height:1.6;}
 
 /* ─── PORTFOLIO ─── */
-.portfolio-hero{min-height:45vh;display:flex;align-items:flex-end;padding:100px 48px 72px;background:radial-gradient(ellipse 60% 40% at 100% 50%,rgba(201,168,76,0.06) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);}
+.portfolio-hero{display:flex;align-items:flex-end;padding:108px 48px 48px;background:radial-gradient(ellipse 60% 40% at 100% 50%,rgba(201,168,76,0.06) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);}
 .portfolio-hero-inner{max-width:1200px;margin:0 auto;width:100%;}
 .port-filter{max-width:1200px;margin:0 auto;padding:40px 48px 0;display:flex;gap:8px;flex-wrap:wrap;}
 .filter-btn{padding:9px 20px;border:1px solid var(--border);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);background:transparent;cursor:pointer;transition:all 0.3s;font-family:"DM Sans",sans-serif;}
 .filter-btn:hover,.filter-btn.active{border-color:var(--gold-dim);color:var(--gold);}
-.port-grid{max-width:1200px;margin:24px auto 90px;padding:0 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--black);border:1px solid var(--black);align-items:start;}
+.port-grid{max-width:1200px;margin:24px auto 90px;padding:0 48px;}
+.port-grid--vertical{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;}
+.port-grid--vertical .port-item{flex:0 0 calc(33.333% - 2px);}
+.port-grid--landscape{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
 .port-item{background:var(--card);aspect-ratio:16/10;position:relative;overflow:hidden;display:block;}
 .port-item-bg{position:absolute;inset:0;transition:transform 0.5s;}
 .port-item:hover .port-item-bg{transform:scale(1.04);}
@@ -147,7 +150,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .port-item iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;pointer-events:all;}
 
 /* ─── PRICING ─── */
-.pricing-hero{min-height:45vh;display:flex;align-items:flex-end;padding:100px 48px 72px;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(201,168,76,0.08) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);text-align:center;}
+.pricing-hero{display:flex;align-items:flex-end;padding:108px 48px 48px;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(201,168,76,0.08) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);text-align:center;}
 .pricing-hero-inner{max-width:1200px;margin:0 auto;width:100%;}
 .pricing-hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(52px,10vw,128px);line-height:0.88;letter-spacing:2px;}
 .pricing-note{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;color:var(--muted2);max-width:500px;margin:18px auto 0;line-height:1.5;}
@@ -181,7 +184,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;
 .oneoff-desc{font-size:13px;color:var(--muted);line-height:1.6;}
 
 /* ─── BOOKING ─── */
-.booking-hero{min-height:45vh;display:flex;align-items:flex-end;padding:100px 48px 72px;background:radial-gradient(ellipse 50% 40% at 50% 0%,rgba(201,168,76,0.08) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);text-align:center;}
+.booking-hero{display:flex;align-items:flex-end;padding:108px 48px 48px;background:radial-gradient(ellipse 50% 40% at 50% 0%,rgba(201,168,76,0.08) 0%,transparent 60%),var(--black);border-bottom:1px solid var(--border);text-align:center;}
 .booking-hero-inner{max-width:1200px;margin:0 auto;width:100%;}
 .booking-hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(48px,8vw,100px);line-height:0.9;letter-spacing:2px;}
 .booking-hero p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;color:var(--muted2);max-width:520px;margin:18px auto 0;line-height:1.5;}
@@ -209,6 +212,26 @@ footer{padding:52px 48px;border-top:1px solid var(--border);display:flex;align-i
 .footer-links a:hover{color:var(--gold);}
 .footer-copy{font-size:12px;color:var(--muted);}
 
+/* ─── CLICK-TO-PLAY THUMBNAILS ─── */
+.yt-thumb{position:absolute;inset:0;cursor:pointer;overflow:hidden;}
+.yt-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
+.yt-thumb:hover img{transform:scale(1.03);}
+.yt-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.yt-play svg{width:56px;height:56px;fill:var(--black);background:var(--gold);border-radius:50%;padding:14px;transition:all 0.3s;box-shadow:0 4px 24px rgba(0,0,0,0.6);}
+.yt-thumb:hover .yt-play svg{background:var(--gold-light);transform:scale(1.1);}
+
+/* 16:9 iframe in a 16:9 container — fills perfectly */
+.yt-thumb iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+
+/* 16:9 iframe in a 9:16 container — scale up to cover, center horizontally */
+.port-item.vertical .yt-thumb iframe{
+  width:316%;
+  height:100%;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+}
+
 /* ─── MOBILE ─── */
 @media(max-width:768px){
   /* Nav */
@@ -221,7 +244,7 @@ footer{padding:52px 48px;border-top:1px solid var(--border);display:flex;align-i
   .mobile-nav{top:60px;}
 
   /* Hero */
-  .hero{padding:60px 20px 0;min-height:100svh;}
+  .hero{padding:84px 20px 60px;min-height:unset;}
   .hero-logo{height:100px;margin-bottom:20px;}
   .hero-eyebrow{font-size:9px;letter-spacing:3px;margin-bottom:20px;}
   .hero h1{font-size:clamp(52px,15vw,80px);}
@@ -254,21 +277,23 @@ footer{padding:52px 48px;border-top:1px solid var(--border);display:flex;align-i
   .home-cta{padding:80px 20px;}
 
   /* About */
-  .about-hero{padding:80px 20px 48px;min-height:auto;}
+  .about-hero{padding:84px 20px 32px;min-height:auto;}
   .about-body{grid-template-columns:1fr;padding:48px 20px;gap:36px;}
   .about-photo{max-height:400px;aspect-ratio:auto;}
   .about-values{grid-template-columns:1fr;}
 
   /* Portfolio */
-  .portfolio-hero{padding:80px 20px 48px;min-height:auto;}
+  .portfolio-hero{padding:84px 20px 32px;}
   .port-filter{padding:24px 20px 0;gap:6px;}
   .filter-btn{padding:7px 14px;font-size:9px;}
-  .port-grid{grid-template-columns:1fr;padding:0 20px;margin:16px auto 48px;gap:2px;}
+  .port-grid--vertical{flex-direction:row;padding:0 20px;margin:16px auto 48px;}
+  .port-grid--vertical .port-item{flex:0 0 100%;}
+  .port-grid--landscape{grid-template-columns:1fr;padding:0 20px;margin:16px auto 48px;}
   .port-item{aspect-ratio:16/9;}
   .port-item.vertical{aspect-ratio:9/16;}
 
   /* Pricing */
-  .pricing-hero{padding:80px 20px 48px;min-height:auto;}
+  .pricing-hero{padding:84px 20px 32px;}
   .pricing-body{padding:48px 20px 0;}
   .retainer-grid{grid-template-columns:1fr;}
   .r-card{padding:32px 24px;}
@@ -278,7 +303,7 @@ footer{padding:52px 48px;border-top:1px solid var(--border);display:flex;align-i
   .oneoff-card{border-right:none;border-bottom:1px solid var(--border);}
 
   /* Booking */
-  .booking-hero{padding:80px 20px 48px;min-height:auto;}
+  .booking-hero{padding:84px 20px 32px;}
   .booking-body{padding:48px 20px 72px;}
   .booking-options{grid-template-columns:1fr;}
   .booking-card{padding:32px 24px;}

@@ -1,13 +1,18 @@
-function showPage(id){
-  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+function showPage(id) {
+  document.querySelectorAll(".yt-thumb").forEach(function(thumb) {
+    resetYT(thumb);
+  });
+  document.querySelectorAll(".page").forEach(function(p) {
+    p.classList.remove("active");
+  });
   document.getElementById(id).classList.add("active");
-  window.scrollTo({top:0,behavior:"smooth"});
+  window.scrollTo({ top: 0, behavior: "smooth" });
   closeMobileNav();
 }
 
-function closeMobileNav(){
-  const nav = document.getElementById("mobileNav");
-  const btn = document.querySelector(".nav-hamburger");
+function closeMobileNav() {
+  var nav = document.getElementById("mobileNav");
+  var btn = document.querySelector(".nav-hamburger");
   nav.classList.remove("open");
   btn.classList.remove("open");
   btn.setAttribute("aria-expanded", "false");
@@ -15,12 +20,12 @@ function closeMobileNav(){
   document.body.style.overflow = "";
 }
 
-function toggleMobileNav(){
-  const nav = document.getElementById("mobileNav");
-  if(nav.classList.contains("open")){
+function toggleMobileNav() {
+  var nav = document.getElementById("mobileNav");
+  if (nav.classList.contains("open")) {
     closeMobileNav();
   } else {
-    const btn = document.querySelector(".nav-hamburger");
+    var btn = document.querySelector(".nav-hamburger");
     nav.classList.add("open");
     btn.classList.add("open");
     btn.setAttribute("aria-expanded", "true");
@@ -29,38 +34,80 @@ function toggleMobileNav(){
   }
 }
 
-function filterPort(type, btn){
-  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  document.querySelectorAll(".port-item").forEach(item=>{
-    item.style.display = (type==="all" || item.dataset.type===type) ? "block" : "none";
+function loadYT(el) {
+  // Stop any currently playing video first
+  document.querySelectorAll(".yt-thumb").forEach(function(thumb) {
+    if (thumb !== el) resetYT(thumb);
   });
+  var vid = el.dataset.vid;
+  var iframe = document.createElement("iframe");
+  iframe.src = "https://www.youtube.com/embed/" + vid + "?autoplay=1&rel=0&playsinline=1";
+  iframe.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
+  iframe.allowFullscreen = true;
+  el.innerHTML = "";
+  el.appendChild(iframe);
+  el.onclick = null;
 }
 
-function openVideo(url, title, type, client){
-  if(url && url !== "https://vimeo.com/"){
+function resetYT(thumb) {
+  if (thumb && thumb.querySelector("iframe")) {
+    var vid = thumb.dataset.vid;
+    thumb.innerHTML = '<img src="https://img.youtube.com/vi/' + vid + '/maxresdefault.jpg" loading="lazy"><div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>';
+    thumb.onclick = function() { loadYT(this); };
+  }
+}
+
+function filterPort(type, btn) {
+  document.querySelectorAll(".filter-btn").forEach(function(b) {
+    b.classList.remove("active");
+  });
+  btn.classList.add("active");
+  document.querySelectorAll(".port-item").forEach(function(item) {
+    var isVisible = (type === "all" || item.dataset.type === type);
+    if (!isVisible) {
+      resetYT(item.querySelector(".yt-thumb"));
+      item.style.display = "none";
+    } else {
+      item.style.display = "";
+    }
+  });
+  var verticalGrid = document.querySelector(".port-grid--vertical");
+  var landscapeGrid = document.querySelector(".port-grid--landscape");
+  if(verticalGrid){
+    var vHasVisible = Array.from(verticalGrid.querySelectorAll(".port-item")).some(function(i){ return i.style.display !== "none"; });
+    verticalGrid.style.display = vHasVisible ? "flex" : "none";
+  }
+  if(landscapeGrid){
+    var lHasVisible = Array.from(landscapeGrid.querySelectorAll(".port-item")).some(function(i){ return i.style.display !== "none"; });
+    landscapeGrid.style.display = lHasVisible ? "grid" : "none";
+  }
+}
+
+function openVideo(url, title) {
+  if (url && url !== "https://vimeo.com/") {
     window.open(url, "_blank");
   } else {
     alert("Add your Vimeo/YouTube link for: " + title);
   }
 }
 
-function handleApply(e){
+function handleApply(e) {
   e.preventDefault();
-  const btn = e.target.querySelector(".form-submit");
-  btn.textContent = "Application Submitted ✓";
+  var btn = e.target.querySelector(".form-submit");
+  btn.textContent = "Application Submitted";
   btn.style.background = "#2a4a2a";
   btn.style.color = "#7fc47f";
   btn.disabled = true;
-  setTimeout(()=>{
+  setTimeout(function() {
     window.open("https://calendly.com/kingdomlensproductions/30min", "_blank");
   }, 1500);
 }
 
-// Close mobile nav on Escape key
-document.addEventListener("keydown", function(e){
-  if(e.key === "Escape"){
-    const nav = document.getElementById("mobileNav");
-    if(nav && nav.classList.contains("open")) toggleMobileNav();
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    var nav = document.getElementById("mobileNav");
+    if (nav && nav.classList.contains("open")) {
+      closeMobileNav();
+    }
   }
 });
