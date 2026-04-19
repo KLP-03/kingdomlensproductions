@@ -2,20 +2,31 @@ function showPage(id){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
   document.getElementById(id).classList.add("active");
   window.scrollTo({top:0,behavior:"smooth"});
-  // Close mobile nav if open
-  const mobileNav = document.getElementById("mobileNav");
-  if(mobileNav.classList.contains("open")) toggleMobileNav();
+  closeMobileNav();
+}
+
+function closeMobileNav(){
+  const nav = document.getElementById("mobileNav");
+  const btn = document.querySelector(".nav-hamburger");
+  nav.classList.remove("open");
+  btn.classList.remove("open");
+  btn.setAttribute("aria-expanded", "false");
+  nav.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
 }
 
 function toggleMobileNav(){
   const nav = document.getElementById("mobileNav");
-  const btn = document.querySelector(".nav-hamburger");
-  const isOpen = nav.classList.toggle("open");
-  btn.classList.toggle("open", isOpen);
-  btn.setAttribute("aria-expanded", isOpen);
-  nav.setAttribute("aria-hidden", !isOpen);
-  // Prevent body scroll while nav is open
-  document.body.style.overflow = isOpen ? "hidden" : "";
+  if(nav.classList.contains("open")){
+    closeMobileNav();
+  } else {
+    const btn = document.querySelector(".nav-hamburger");
+    nav.classList.add("open");
+    btn.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+    nav.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 }
 
 function filterPort(type, btn){
