@@ -249,7 +249,7 @@ footer{padding:52px 48px;border-top:1px solid var(--border);display:flex;align-i
   .filter-btn{padding:7px 14px;font-size:9px;}
   .port-grid{grid-template-columns:1fr;padding:0 20px;margin:16px auto 60px;}
   .port-item{aspect-ratio:16/10;}
-  .port-item.vertical{aspect-ratio:16/10;}
+  .port-item.vertical{aspect-ratio:9/16;}
   footer{flex-direction:column;gap:20px;text-align:center;padding:36px 20px;}
   .footer-links{flex-wrap:wrap;justify-content:center;}
   .showcase-grid{display:none;}
